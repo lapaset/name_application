@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Select from 'react-select'
+import SearchForm from './components/SearchForm'
+import SearchResult from './components/SearchResults'
 import NameList from './components/NameList'
 import namesFromJson from './names.json'
 import './App.css'
@@ -8,6 +10,8 @@ import './App.css'
 const App = () => {
 
 	const [names, setNames] = useState([])
+	const [nameField, setNameField] = useState('')
+	const [searchResult, setSearchResult] = useState(null)
 	const [sortMode, setSortMode] = useState({ value: 'popular', label: 'Most popular' })
 	const sortOptions = [
 		{ value: 'popular', label: 'Most popular' },
@@ -32,11 +36,26 @@ const App = () => {
 		setSortMode(selected)
 	}
 
+	const handleSearch = e => {
+
+		e.preventDefault()
+
+		const name = names.find(n => n.name.toLowerCase() === nameField.toLowerCase())
+		
+		setSearchResult(name ? name : `No results for ${nameField}`)
+		setNameField('')
+	}
+
 	return (
 		<div className='main-container'>
 
 			<h1>Name App</h1>
 
+			<SearchForm nameField={nameField}
+				setNameField={setNameField}
+				handleClick={handleSearch} />
+
+			{ searchResult && <SearchResult result={searchResult} /> }
 
 			<h2>Sort by</h2>
 

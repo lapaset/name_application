@@ -24,3 +24,34 @@ li {
 	padding: 0.6em 0.2em;
 	border-top: 1px solid lightgray;
 }
+
+input {
+	font-size: 1rem;
+	padding: 0.6em;
+	background: white;
+	border: 1px solid lightgray;
+}
+
+.name-input {
+	display: flex;
+}
+
+input[type=text] {
+	flex: 1;
+	border-radius: 4px 0 0 4px;
+	border-right: 0;
+}
+
+input[type=submit] {
+	border-radius: 0 4px 4px 0;
+}
+
+.search-by-name-result {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1em;
+	padding: 0.6em 0.2em;
+	border-width: 1px 0;
+	border-color: lightgray;
+	border-style: solid;
+}
