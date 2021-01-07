@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import './App.css'
+import NameList from './components/NameList'
 import namesFromJson from './names.json'
+import './App.css'
+
 
 const App = () => {
 
@@ -17,16 +19,8 @@ const App = () => {
 
 			<h1>Name App</h1>
 			
-			<ul>
-				{
-					names
-						.map(n => <li key={n.name}>
-							<span>{n.name}</span>
-							<span>{n.amount}</span>
-						</li>)
-				}
-			</ul>
-			
+			<NameList names={names} />
+
 		</div>
 	)
 }
