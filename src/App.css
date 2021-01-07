@@ -16,6 +16,6 @@ ul {
 li {
 	display: flex;
 	justify-content: space-between;
-	padding: 0.5em 0;
-	border-top: 1px solid black;
+	padding: 0.6em 0.2em;
+	border-top: 1px solid lightgray;
 }
