@@ -3,6 +3,7 @@ import Select from 'react-select'
 import SearchForm from './components/SearchForm'
 import SearchResult from './components/SearchResults'
 import NameList from './components/NameList'
+import Total from './components/Total'
 import namesFromJson from './names.json'
 import './App.css'
 
@@ -64,6 +65,8 @@ const App = () => {
 				onChange={handleSelectChange} />
 
 			<NameList names={names} />
+
+			<Total amount={names.reduce((s, n) => s + n.amount, 0)} />
 
 		</div>
 	)

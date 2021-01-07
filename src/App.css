@@ -55,3 +55,12 @@ input[type=submit] {
 	border-color: lightgray;
 	border-style: solid;
 }
+
+.total {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5em 0;
+	font-weight: bold;
+	border-top: 2px solid black;
+}
