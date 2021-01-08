@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - [Subject](https://github.com/solita/dev-academy-2021)
 
-- [Project in Heroku](https://intense-bastion-04301.herokuapp.com/)
+- [App in Heroku](https://intense-bastion-04301.herokuapp.com/)
 
 - Or run locally:
   - `npm start` Runs the app in the development mode at [http://localhost:3000](http://localhost:3000)
